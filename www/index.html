@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>-->
+        <title>Material App</title>
+
+        <!--cordova-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'  https://fonts.gstatic.com https://code.jquery.com https://musicbrainz.org/ws/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+            
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body>
+            <nav class="light-blue lighten-1" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Matriculacions</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#"></a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#"></a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menú</i></a>
+                </div>
+            </nav>
+
+
+            <!-- Sections bar-->
+            <ul id="tabs" class="tabs">
+                <li class="tab col s3 m3 l3 xl3"><a class="active" href="#swipe-1">Tauler</a></li>
+                <li class="tab col s3 m3 l3 xl3"><a href="#swipe-2">Documentos</a></li>
+                <li class="tab col s3 m3 l3 xl3"><a href="#swipe-3">UFs</a></li>
+                <li class="tab col s3 m3 l3 xl3"><a href="#swipe-4">Datos Personales</a></li>
+            </ul>
+
+            <div id="swipe-1" class="col s12 blue">
+                <div class="col s12 m12 l12 center">
+                    <h1 style="color:white">Instituto Esteve Terradas</h1>
+                    <img src="img/esteve.jpeg">
+                </div>
+            </div>
+
+            <div id="swipe-2" class="col s12 grey">
+                                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Selecciona ficheros a subir:
+                    <input type="file" value="Cargar Documento" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Subir Ficheros" name="submit">
+                </form>   
+                <ul id="list" class="collection">
+                    <li>
+                        <a class="collection-item">DNI
+                            <i class="secondary-content material-icons dp48" >done_all</i>
+                            <i class="secondary-content material-icons dp48">cancel</i>
+                            <i class="secondary-content material-icons dp48" style="color:red">change_history</i>
+                        </a>
+                    </li>
+                    <a class="collection-item">Tarjeta Sanitaria
+                        <i class="secondary-content material-icons dp48">done_all</i>
+                        <i class="secondary-content material-icons dp48" style="color:orange">cancel</i>
+                        <i class="secondary-content material-icons dp48">change_history</i>
+                    </a>
+                    <a class="collection-item">Titulo Estudiantil
+                        <i class="secondary-content material-icons dp48">done_all</i>
+                        <i class="secondary-content material-icons dp48">cancel</i>
+                        <i class="secondary-content material-icons dp48" style="color:red">change_history</i>
+                    </a>
+                    <a class="collection-item">Tarjeta Familia Numerosa
+                        <i class="secondary-content material-icons dp48" style="color:green">done_all</i>
+                        <i class="secondary-content material-icons dp48">cancel</i>
+                        <i class="secondary-content material-icons dp48" >change_history</i>
+                    </a>
+
+                    <a href="#!" class="collection-item">Tarjeta Familia Monoparental
+                        <i class="secondary-content material-icons dp48" style="color:green">done_all</i>
+                        <i class="secondary-content material-icons dp48">cancel</i>
+                        <i class="secondary-content material-icons dp48">change_history</i>
+                    </a>
+                </ul>
+             
+            </div>
+            <div id="swipe-4" class="col s12 white">
+                <div class="user" style="text-align:center">
+
+                </div>
+            </div>
+            <div id="swipe-3" class="col s12 orange">
+                <div>
+                    <ul class="collapsible">
+
+                    </ul>
+                </div>
+            </div>
+            
+        <!--  Scripts-->
+        <script src="cordova.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/modulos.js"></script>
+        <script src="js/init.js"></script>
+
+    </body>
+</html>
